@@ -6,6 +6,7 @@ extern crate rand;
 mod hello;
 mod random;
 mod mythreads;
+mod simd;
 
 // Export functions called by R
 pub use hello::string_from_rust;

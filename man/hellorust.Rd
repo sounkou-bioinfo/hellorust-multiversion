@@ -19,9 +19,9 @@ a value generated in Rust (a string, random number, and NULL respectively).
 Minimal examples of calling rust functions in R via C.
 }
 \details{
-These functions call out to rust functions defined in the `myrustlib` cargo
+These functions call out to rust functions defined in the \code{myrustlib} cargo
 crate which is embedded in this package. They return values generated in Rust,
-such as a UTF-8 string or random number. In addition, `runthreads` is an
+such as a UTF-8 string or random number. In addition, \code{runthreads} is an
 example of a multi-threaded rust function.
 }
 \examples{

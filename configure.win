@@ -11,8 +11,8 @@ else
 fi
 
 cp src/Makevars.win.in src/Makevars.win
-cat <<EOF2
+cat <<EOF
 SIMD demo: Rust target_feature kernels are linked into one R shared library.
 SIMD demo: C dispatch uses Rust-reported compiled and runtime CPU features.
-EOF2
+EOF
 exit 0

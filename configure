@@ -1,6 +1,8 @@
 #!/bin/sh
+set -e
+
 export PATH="$PATH:$HOME/.cargo/bin"
-if [ $(command -v cargo) ]; then
+if command -v cargo >/dev/null 2>&1; then
   cargo --version
   rustc --version || true
 else
@@ -16,4 +18,10 @@ else
   echo ""
   exit 1
 fi
+
+cp src/Makevars.in src/Makevars
+cat <<EOF
+SIMD demo: Rust target_feature kernels are linked into one R shared library.
+SIMD demo: C dispatch uses Rust-reported compiled and runtime CPU features.
+EOF
 exit 0
